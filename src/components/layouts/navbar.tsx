@@ -52,55 +52,52 @@ const Navbar = () => {
             aria-label="Menu"
           >
             {!isMenuOpen ? (
-              <Menu className="size-7" />
+              <Menu className="size-8" />
             ) : (
-              <X className="size-7" />
+              <X className="size-8" />
             )}
           </div>
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <nav className="fixed top-0 left-0 z-50 h-full lg:hidden">
-              <div className="flex h-full w-full bg-black p-5">
-                <div className="relative flex h-full flex-col items-center justify-center">
-                  <div
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "absolute top-5 right-5 flex transition duration-300 ease-linear",
-                    )}
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    aria-label="Menu"
-                  >
-                    {!isMenuOpen ? (
-                      <Menu className="size-8" />
-                    ) : (
-                      <X className="size-8" />
-                    )}
-                  </div>
-                  <ul className="flex flex-col items-center space-y-5 text-base text-white/80">
-                    {navbarItems.map((item) => (
-                      <li key={item.name}>
-                        <Link
-                          href={item.href}
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link
-                    href="/quote"
-                    className={cn(
-                      buttonVariants({ variant: "outline" }),
-                      "mt-10",
-                    )}
-                  >
-                    Request a quote
-                    <Paperclip />
-                  </Link>
+            <nav className="fixed top-0 left-0 z-50 w-full lg:hidden transition-opacity ease-in-out duration-500">
+              <div className="relative flex h-screen flex-col items-center justify-center bg-secondary p-5">
+                <div
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "icon" }),
+                    "absolute top-5 right-5 flex transition duration-300 ease-linear text-white",
+                  )}
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  aria-label="Menu"
+                >
+                  {!isMenuOpen ? (
+                    <Menu className="size-8" />
+                  ) : (
+                    <X className="size-8" />
+                  )}
                 </div>
+                <ul className="flex flex-col items-center space-y-5 text-xl font-medium text-white/80">
+                  {navbarItems.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* <Link
+                  href="/quote"
+                  className={cn(
+                    buttonVariants({ variant: "outline" }),
+                    "mt-10",
+                  )}
+                >
+                  Request a quote
+                </Link> */}
               </div>
             </nav>
           )}
