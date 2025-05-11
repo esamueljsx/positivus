@@ -15,7 +15,7 @@ const navbarItems = [
 const Footer = () => {
   return (
     <footer className="mx-auto w-full max-w-screen px-5 pt-5 lg:px-10 lg:pt-10">
-      <div className="bg-secondary flex w-full items-center justify-between rounded-t-[45px] px-[60px] py-[55px]">
+      <div className="bg-secondary flex-col lg:flex-row flex w-full items-center justify-between rounded-t-[45px] px-[60px] py-[55px]">
         <Link href="/">
           <LogoIcon className="h-7 text-white" />
         </Link>
