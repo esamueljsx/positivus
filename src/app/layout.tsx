@@ -1,4 +1,5 @@
 import "./globals.css";
+import "aos/dist/aos.css";
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import Wrapper from "@/components/layouts/wrapper";

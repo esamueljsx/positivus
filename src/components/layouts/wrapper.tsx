@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
-import { AOSInit } from "../animations/AOSInit";
+import { AOSInit } from "../Animation/AOSInit";
 
 const Wrapper = ({ children }: { children: ReactNode }) => {
   return (

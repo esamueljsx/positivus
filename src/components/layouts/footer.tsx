@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import LogoIcon from "../ui/icons";
 import { buttonVariants } from "../ui/button";
+import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 const navbarItems = [
   { name: "About", href: "#about" },
@@ -27,7 +28,11 @@ const Footer = () => {
           ))}
         </ul>
 
-        <div className="flex items-center gap-6 text-white">hi</div>
+        <div className="flex items-center gap-6 text-white">
+          <Linkedin size={16} />
+          <Facebook  size={16} />
+          <Twitter size={16} />
+        </div>
       </div>
     </footer>
   );
