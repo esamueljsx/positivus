@@ -30,7 +30,7 @@ const Footer = () => {
 
         <div className="flex items-center gap-6 text-white">
           <Linkedin size={16} />
-          <Facebook  size={16} />
+          <Facebook size={16} />
           <Twitter size={16} />
         </div>
       </div>

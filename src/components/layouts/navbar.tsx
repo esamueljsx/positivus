@@ -60,7 +60,7 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <nav className="fixed top-0 left-0 z-50 lg:hidden h-full">
+            <nav className="fixed top-0 left-0 z-50 h-full lg:hidden">
               <div className="flex h-full w-full bg-black p-5">
                 <div className="relative flex h-full flex-col items-center justify-center">
                   <div
