@@ -14,7 +14,7 @@ const navbarItems = [
 
 const Footer = () => {
   return (
-    <footer className="mx-auto w-full max-w-screen px-5 pt-5 lg:px-10 lg:pt-10">
+    <footer className="mx-auto max-w-screen-xl px-5 pt-5 lg:px-10 lg:pt-10">
       <div className="bg-secondary flex w-full flex-col gap-14 rounded-t-[45px] px-[60px] py-[55px]">
         <div className="flex flex-col items-center justify-between gap-[37px] lg:flex-row lg:gap-15">
           <Link href="/">
