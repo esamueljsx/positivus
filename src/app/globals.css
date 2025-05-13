@@ -170,17 +170,15 @@
 body {
   font-family: var(--font-grotesk);
 }
-h1,
 h2,
 h3,
-h4,
 h5,
 h6 {
   @apply leading-normal font-medium;
 }
 
 h1 {
-  @apply text-[43px] lg:text-6xl;
+  @apply text-[43px]/tight font-medium lg:text-6xl/tight;
 }
 h2 {
   @apply text-4xl lg:text-[40px];
@@ -189,12 +187,12 @@ h3 {
   @apply text-[26px] lg:text-3xl;
 }
 h4 {
-  @apply text-lg lg:text-xl;
+  @apply text-lg font-normal lg:text-xl/7;
 }
 p {
   @apply text-base sm:leading-6 lg:text-lg;
 }
 
 .content-wrapper {
-  @apply mx-auto max-w-3xl px-4 sm:px-6 lg:px-8;
+  @apply mx-auto max-w-screen-xl p-5 lg:px-10;
 }

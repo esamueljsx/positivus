@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import LogoIcon from "../ui/icons";
+import { LogoIcon } from "../ui/icons";
 import { buttonVariants } from "../ui/button";
 import { Facebook, Linkedin, Twitter } from "lucide-react";
 
