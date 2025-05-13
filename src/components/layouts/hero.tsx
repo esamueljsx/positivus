@@ -14,7 +14,7 @@ function Hero() {
             online through a range of services including SEO, PPC, social media
             marketing, and content creation.
           </h4>
-          <div className="lg:hidden block">
+          <div className="block lg:hidden">
             <HeroIcon />
           </div>
           <p className="block lg:hidden">
