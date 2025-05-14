@@ -11,6 +11,7 @@ const services = [
     title1: "Search Engine",
     title2: "Optimization",
     bgColor: "bg-muted",
+    badge: "default",
     color: "text-primary",
   },
   {
@@ -35,6 +36,7 @@ const services = [
     title1: "Email",
     title2: "Marketing",
     bgColor: "bg-muted",
+    badge: "default",
     color: "text-primary",
   },
   {
@@ -50,6 +52,7 @@ const services = [
     title1: "Analytics and",
     title2: "Tracking",
     bgColor: "bg-secondary",
+    badge: "default",
     color: "bg-white text-black",
     text: "text-white",
   },
@@ -83,10 +86,16 @@ export default function Services() {
               <div className="flex min-h-full w-full flex-col justify-between gap-6 lg:w-56">
                 {/* Title Badge */}
                 <h3 className="text-left">
-                  <Badge variant={service.badge} size="lg">
+                  <Badge
+                    variant={service.badge as "default" | "white" | undefined}
+                    size="lg"
+                  >
                     {service.title1}
                   </Badge>
-                  <Badge variant={service.badge} size="lg">
+                  <Badge
+                    variant={service.badge as "default" | "white" | undefined}
+                    size="lg"
+                  >
                     {service.title2}
                   </Badge>
                 </h3>
@@ -107,7 +116,7 @@ export default function Services() {
                     </h4>
                   </div>
 
-                  <div className="lg:hidden h-[129px] w-[165px] flex justify-end">
+                  <div className="flex h-[129px] w-[165px] justify-end lg:hidden">
                     <Image
                       src={service.img}
                       alt="SEO"
