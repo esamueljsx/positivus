@@ -3,7 +3,7 @@ import React from "react";
 import { buttonVariants } from "../ui/button";
 import { HeroIcon } from "../ui/icons";
 
-function Hero() {
+export default function Hero() {
   return (
     <section className="content-wrapper py-14 lg:py-[70px]">
       <div className="grid grid-cols-1 items-center justify-between gap-10 lg:grid-cols-2">
@@ -17,6 +17,7 @@ function Hero() {
           <div className="block lg:hidden">
             <HeroIcon />
           </div>
+
           <p className="block lg:hidden">
             Our digital marketing agency helps businesses grow and succeed
             online through a range of services including SEO, PPC, social media
@@ -40,5 +41,3 @@ function Hero() {
     </section>
   );
 }
-
-export default Hero;

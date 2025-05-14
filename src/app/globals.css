@@ -171,22 +171,25 @@ body {
   font-family: var(--font-grotesk);
 }
 h2,
-h3,
 h5,
 h6 {
   @apply leading-normal font-medium;
 }
 
-h1 {
+h1,
+.h1 {
   @apply text-[43px]/tight font-medium lg:text-6xl/tight;
 }
-h2 {
+h2,
+.h2 {
   @apply text-4xl lg:text-[40px];
 }
-h3 {
-  @apply text-[26px] lg:text-3xl;
+h3,
+.h3 {
+  @apply text-[26px]/tight font-medium lg:text-3xl/tight;
 }
-h4 {
+h4,
+.h4 {
   @apply text-lg font-normal lg:text-xl/7;
 }
 p {
@@ -194,5 +197,27 @@ p {
 }
 
 .content-wrapper {
-  @apply mx-auto container p-5 lg:px-10;
+  @apply container mx-auto p-5 lg:px-10;
+}
+
+.thick-shadow {
+  @apply shadow-secondary border-secondary border shadow-[0px_5px_0px_0px];
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}
+
+.animate-scroll-reverse {
+  animation: scroll 10s linear infinite;
+  animation-direction: reverse;
 }
