@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import Link from "next/link";
 import { buttonVariants } from "../ui/button";
@@ -10,7 +9,7 @@ import { Menu, X } from "lucide-react";
 const navbarItems = [
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
-  { name: "Use cases", href: "#use-cases" },
+  { name: "Use cases", href: "#case-studies" },
   { name: "Pricing", href: "#pricing" },
   { name: "Blog", href: "#blog" },
 ];
@@ -19,7 +18,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white lg:py-6">
+    <nav className="w-full bg-white py-5 lg:py-6">
       <div className="content-wrapper">
         <div className="flex w-full items-center justify-between">
           <Link href="/" className="outline-0 select-none">
@@ -60,8 +59,13 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <nav className="fixed top-0 left-0 z-50 w-full transition-opacity duration-500 ease-in-out lg:hidden">
-              <div className="bg-secondary relative flex h-screen flex-col items-center justify-center p-5">
+            <div
+              className={cn(
+                "bg-secondary fixed top-0 left-0 z-50 h-full w-full transform transition-transform duration-500 ease-in-out lg:hidden",
+                isMenuOpen ? "translate-x-0" : "-translate-x-full",
+              )}
+            >
+              <div className="content-wrapper relative flex h-full flex-col items-center justify-center p-5">
                 <div
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
@@ -89,7 +93,7 @@ const Navbar = () => {
                   ))}
                 </ul>
               </div>
-            </nav>
+            </div>
           )}
         </div>
       </div>

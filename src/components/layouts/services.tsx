@@ -1,8 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "../ui/badge";
 import Image from "next/image";
-import { Button, buttonVariants } from "../ui/button";
-import Link from "next/link";
+import { Button } from "../ui/button";
 import { ArrowIcon } from "../ui/icons";
 
 const services = [
@@ -60,7 +59,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="content-wrapper py-14 lg:py-[70px]">
+    <section className="content-wrapper py-14" id="services">
       <div className="block space-y-10 lg:space-y-20">
         <div className="flex flex-col items-center justify-center gap-7.5 lg:flex-row lg:justify-start lg:gap-10">
           <Badge>

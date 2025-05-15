@@ -9,9 +9,9 @@ import {
 
 export default function Cloud() {
   return (
-    <section className="content-wrapper overflow-hidden py-14 lg:py-[70px]">
-      <div className="relative block w-full space-y-5">
-        <div className="animate-scroll flex items-center gap-10 grayscale-100">
+    <section className="content-wrapper overflow-hidden py-5 lg:py-7">
+      <div className="relative block w-full space-y-5 lg:space-y-0">
+        <div className="animate-scroll flex items-center justify-center gap-10 grayscale-100">
           <ZoomIcon className="h-12 shrink-0" />
           <NetflixIcon className="h-12 shrink-0" />
           <NotionIcon className="h-12 shrink-0" />

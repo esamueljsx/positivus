@@ -5,7 +5,7 @@ import { HeroIcon } from "../ui/icons";
 
 export default function Hero() {
   return (
-    <section className="content-wrapper py-14 lg:py-[70px]">
+    <section className="content-wrapper py-12 lg:py-15">
       <div className="grid grid-cols-1 items-center justify-between gap-10 lg:grid-cols-2">
         <div className="flex flex-col gap-5 lg:gap-[35px]">
           <h1>Navigating the digital landscape for success</h1>

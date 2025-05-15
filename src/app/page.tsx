@@ -1,6 +1,8 @@
 import Hero from "@/components/layouts/hero";
 import Cloud from "@/components/layouts/cloud";
 import Services from "@/components/layouts/services";
+import CTA from "@/components/layouts/cta";
+import CaseStudy from "@/components/layouts/case-study";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <Hero />
       <Cloud />
       <Services />
+      <CTA />
+      <CaseStudy />
     </main>
   );
 }

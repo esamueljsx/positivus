@@ -14,7 +14,7 @@
   --primary-foreground: oklch(0 0 0);
   --secondary: oklch(0.22 0.02 279.88);
   --secondary-foreground: oklch(0.96 0 0);
-  --muted: oklch(0.98 0 0);
+  --muted: oklch(0.96 0 0);
   --muted-foreground: oklch(0.65 0 0);
   --accent: oklch(0.98 0 0);
   --accent-foreground: oklch(0.33 0 0);
@@ -192,12 +192,13 @@ h4,
 .h4 {
   @apply text-lg font-normal lg:text-xl/7;
 }
-p {
+p,
+.p {
   @apply text-base sm:leading-6 lg:text-lg;
 }
 
 .content-wrapper {
-  @apply container mx-auto p-5 lg:px-10;
+  @apply container mx-auto px-5 lg:px-10;
 }
 
 .thick-shadow {
