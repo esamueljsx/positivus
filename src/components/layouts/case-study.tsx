@@ -20,7 +20,7 @@ const caseStudies = [
 
 export default function CaseStudy() {
   return (
-    <section className="content-wrapper py-14 lg:py-21" id="case-studies">
+    <section className="content-wrapper py-14 lg:py-20" id="case-studies">
       <div className="block space-y-10 lg:space-y-20">
         <div className="flex flex-col items-center justify-center gap-7.5 lg:flex-row lg:justify-start lg:gap-10">
           <Badge>
@@ -33,20 +33,40 @@ export default function CaseStudy() {
           </p>
         </div>
 
-        <div className="bg-secondary flex flex-col items-start gap-10 divide-y divide-white rounded-[45px] px-12.5 py-10.5 text-white lg:h-[326px] lg:flex-row lg:gap-14 lg:divide-x lg:divide-y-0 lg:px-15 lg:py-17.5">
-          {caseStudies.map((study, index) => (
-            <div
-              key={index}
-              className="block space-y-5 pb-6 last:pr-0 last:pb-0 lg:pr-14 lg:pb-0"
-            >
-              <p className="p lg:text-lg">{study.description}</p>
+        <div>
+          <div className="bg-secondary hidden flex-col items-start gap-10 divide-y divide-white rounded-[36px] px-12.5 py-10.5 text-white lg:flex lg:h-[326px] lg:flex-row lg:gap-14 lg:divide-x lg:divide-y-0 lg:rounded-[45px] lg:px-15 lg:py-17.5">
+            {caseStudies.map((study, index) => (
+              <div
+                key={index}
+                className="block space-y-5 pb-6 last:pr-0 last:pb-0 lg:pr-14 lg:pb-0"
+              >
+                <p className="p lg:text-lg">{study.description}</p>
 
-              <Button variant="link" className="has-[>svg]:p-0 lg:w-fit">
-                Learn More
-                <ArrowIcon />
-              </Button>
-            </div>
-          ))}
+                <Button variant="link" className="has-[>svg]:p-0 lg:w-fit">
+                  Learn More
+                  <ArrowIcon />
+                </Button>
+              </div>
+            ))}
+          </div>
+
+          <div className="hide-scroll flex snap-x snap-mandatory items-center gap-6 overflow-x-auto pb-4 lg:hidden">
+            {caseStudies.map((study, index) => (
+              <div
+                key={index}
+                className="bg-secondary flex min-w-[360px] snap-center flex-col items-start gap-5 rounded-[36px] px-12.5 py-10.5 text-white lg:rounded-[45px]"
+              >
+                <p className="p lg:text-lg">{study.description}</p>
+                <Button
+                  variant="link"
+                  className="h-auto py-0 has-[>svg]:px-0 lg:w-fit"
+                >
+                  Learn More
+                  <ArrowIcon />
+                </Button>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

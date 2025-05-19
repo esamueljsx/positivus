@@ -79,12 +79,12 @@ export default function Services() {
               key={index}
               className={cn(
                 service.bgColor,
-                "thick-shadow flex h-[322px] w-full items-center justify-between gap-6 rounded-[45px] p-[50px] lg:h-[310px]",
+                "thick-shadow flex h-[322px] w-full items-center justify-between gap-6 rounded-[36px] p-[50px] lg:h-[310px] lg:rounded-[45px]",
               )}
             >
               <div className="flex min-h-full w-full flex-col justify-between gap-6 lg:w-56">
                 {/* Title Badge */}
-                <h3 className="text-left">
+                <h3 className="flex flex-col text-left">
                   <Badge
                     variant={service.badge as "default" | "white" | undefined}
                     size="lg"

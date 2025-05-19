@@ -204,21 +204,3 @@ p,
 .thick-shadow {
   @apply shadow-secondary border-secondary border shadow-[0px_5px_0px_0px];
 }
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scroll {
-  animation: scroll 10s linear infinite;
-}
-
-.animate-scroll-reverse {
-  animation: scroll 10s linear infinite;
-  animation-direction: reverse;
-}
