@@ -6,7 +6,7 @@ import { ArrowIcon } from "../ui/icons";
 
 const services = [
   {
-    img: "/seo.png",
+    img: "/services/seo.png",
     title1: "Search Engine",
     title2: "Optimization",
     bgColor: "bg-muted",
@@ -14,7 +14,7 @@ const services = [
     color: "text-primary",
   },
   {
-    img: "/ppc.png",
+    img: "/services/ppc.png",
     title1: "Pay-per-click",
     title2: "Advertising",
     bgColor: "bg-primary",
@@ -22,7 +22,7 @@ const services = [
     color: "text-primary",
   },
   {
-    img: "/smm.png",
+    img: "/services/smm.png",
     title1: "Social Media",
     title2: "Marketing",
     bgColor: "bg-secondary",
@@ -31,7 +31,7 @@ const services = [
     text: "text-white",
   },
   {
-    img: "/email.png",
+    img: "/services/email.png",
     title1: "Email",
     title2: "Marketing",
     bgColor: "bg-muted",
@@ -39,7 +39,7 @@ const services = [
     color: "text-primary",
   },
   {
-    img: "/cc.png",
+    img: "/services/cc.png",
     title1: "Content",
     title2: "Creation",
     bgColor: "bg-primary",
@@ -47,7 +47,7 @@ const services = [
     color: "text-primary",
   },
   {
-    img: "/aat.png",
+    img: "/services/aat.png",
     title1: "Analytics and",
     title2: "Tracking",
     bgColor: "bg-secondary",

@@ -59,7 +59,7 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="thick-shadow animate-in slide-in-from-bottom-1/2 fade-in-0 absolute top-full right-5 left-5 flex flex-col gap-5 rounded-[45px] border bg-white p-6  duration-300  lg:hidden">
+            <div className="thick-shadow animate-in slide-in-from-bottom-1/2 fade-in-0 absolute top-full right-5 left-5 flex flex-col gap-5 rounded-[45px] border bg-white p-6 duration-300 lg:hidden">
               <ul className="flex flex-col items-center gap-5 text-lg font-medium">
                 {navbarItems.map((item) => (
                   <li key={item.name}>
