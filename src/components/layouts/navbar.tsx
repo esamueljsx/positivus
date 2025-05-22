@@ -24,7 +24,7 @@ const Navbar = () => {
     >
       <div className="content-wrapper">
         <div className="flex w-full items-center justify-between">
-          <Link href="/" className="outline-0 select-none">
+          <Link href="/" className="outline-none select-none">
             <LogoIcon className="h-7 text-black lg:h-9" />
           </Link>
 
