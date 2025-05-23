@@ -40,7 +40,7 @@ export default function Reviews() {
     setCurrentIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
     if (scrollContainerRef.current) {
       const reviewWidth = scrollContainerRef.current.children[0].clientWidth;
-      const gap = 40; // 10 * 4 (gap-10 = 2.5rem = 40px)
+      const gap = 40;
       const scrollPosition =
         currentIndex === 0
           ? (reviews.length - 1) * (reviewWidth + gap)
@@ -56,7 +56,7 @@ export default function Reviews() {
     setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
     if (scrollContainerRef.current) {
       const reviewWidth = scrollContainerRef.current.children[0].clientWidth;
-      const gap = 40; // 10 * 4 (gap-10 = 2.5rem = 40px)
+      const gap = 40;
       const scrollPosition =
         currentIndex === reviews.length - 1
           ? 0
@@ -85,7 +85,7 @@ export default function Reviews() {
         <div className="bg-secondary block space-y-15 rounded-[45px] px-7.5 pt-7.5 pb-15 lg:space-y-30 lg:px-0 lg:pt-[84px] lg:pb-[68px]">
           <div
             ref={scrollContainerRef}
-            className="hide-scroll flex snap-x snap-mandatory items-center gap-10 overflow-x-auto lg:pb-24 text-white select-none lg:gap-12.5"
+            className="hide-scroll flex snap-x snap-mandatory items-center gap-10 overflow-x-auto text-white select-none lg:gap-12.5 lg:pb-24"
           >
             {reviews.map((review, index) => (
               <div key={review.id} className="block snap-center space-y-10">
@@ -94,7 +94,7 @@ export default function Reviews() {
 
                   <span className="border-primary bg-secondary absolute -bottom-[20px] left-12 h-10 w-10 rotate-45 border-r-[1.5px] border-b-[1.5px] lg:left-24" />
                 </div>
-                <div className="ml-16 lg:ml-28 flex flex-col">
+                <div className="ml-16 flex flex-col lg:ml-28">
                   <p className="text-primary">John Smith</p>
                   <p className="text-white">Marketing Director at XYZ Corp</p>
                 </div>

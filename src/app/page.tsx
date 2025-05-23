@@ -6,6 +6,7 @@ import CaseStudy from "@/components/layouts/case-study";
 import Process from "@/components/layouts/process";
 import Teams from "@/components/layouts/teams";
 import Reviews from "@/components/layouts/review";
+import Contact from "@/components/layouts/contact";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Process />
       <Teams />
       <Reviews />
+      <Contact />
     </main>
   );
 }
