@@ -115,8 +115,9 @@ export default function Reviews() {
                 <StarIcon
                   key={review.id}
                   className={cn(
-                    "size-3.5 cursor-pointer text-white outline-none",
-                    currentIndex === index && "text-primary",
+                    "size-3.5 cursor-pointer text-white outline-none ",
+                    currentIndex === index &&
+                      "text-primary rotate-180 transition-transform duration-300 ease-linear ",
                   )}
                   onClick={() => setCurrentIndex(index)}
                   role="button"
