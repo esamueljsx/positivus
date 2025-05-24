@@ -36,36 +36,29 @@ export default function Reviews() {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
+  const scrollToReview = (index: number) => {
+    if (!scrollContainerRef.current) return;
+
+    const reviewWidth = scrollContainerRef.current.children[0].clientWidth;
+    const gap = 40;
+    const scrollPosition = index * (reviewWidth + gap);
+
+    scrollContainerRef.current.scrollTo({
+      left: scrollPosition,
+      behavior: "smooth",
+    });
+  };
+
   const handlePrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
-    if (scrollContainerRef.current) {
-      const reviewWidth = scrollContainerRef.current.children[0].clientWidth;
-      const gap = 40;
-      const scrollPosition =
-        currentIndex === 0
-          ? (reviews.length - 1) * (reviewWidth + gap)
-          : (currentIndex - 1) * (reviewWidth + gap);
-      scrollContainerRef.current.scrollTo({
-        left: scrollPosition,
-        behavior: "smooth",
-      });
-    }
+    const newIndex = currentIndex === 0 ? reviews.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+    scrollToReview(newIndex);
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
-    if (scrollContainerRef.current) {
-      const reviewWidth = scrollContainerRef.current.children[0].clientWidth;
-      const gap = 40;
-      const scrollPosition =
-        currentIndex === reviews.length - 1
-          ? 0
-          : (currentIndex + 1) * (reviewWidth + gap);
-      scrollContainerRef.current.scrollTo({
-        left: scrollPosition,
-        behavior: "smooth",
-      });
-    }
+    const newIndex = currentIndex === reviews.length - 1 ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+    scrollToReview(newIndex);
   };
 
   return (
@@ -87,7 +80,7 @@ export default function Reviews() {
             ref={scrollContainerRef}
             className="hide-scroll flex snap-x snap-mandatory items-center gap-10 overflow-x-auto text-white select-none lg:gap-12.5 lg:pb-24"
           >
-            {reviews.map((review, index) => (
+            {reviews.map((review) => (
               <div key={review.id} className="block snap-center space-y-10">
                 <div className="border-primary relative flex min-w-[330px] flex-col items-start gap-5 rounded-[45px] border-[1.5px] p-7.5 text-white lg:min-w-[606px] lg:px-13 lg:py-12">
                   <p className="p lg:text-lg">{`"${review.quote}"`}</p>
@@ -115,9 +108,9 @@ export default function Reviews() {
                 <StarIcon
                   key={review.id}
                   className={cn(
-                    "size-3.5 cursor-pointer text-white outline-none ",
+                    "size-3.5 cursor-pointer text-white outline-none",
                     currentIndex === index &&
-                      "text-primary rotate-180 transition-transform duration-300 ease-linear ",
+                      "text-primary rotate-180 transition-transform duration-300 ease-linear",
                   )}
                   onClick={() => setCurrentIndex(index)}
                   role="button"

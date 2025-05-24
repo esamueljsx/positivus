@@ -21,7 +21,7 @@ export default function Contact() {
         </div>
 
         {/* Cards */}
-        <div className="bg-muted relative grid overflow-hidden rounded-[45px] px-7.5 py-10 lg:grid-cols-3 lg:pt-[60px] lg:pb-20 lg:pl-[100px] items-center">
+        <div className="bg-muted relative grid items-center overflow-hidden rounded-[45px] px-7.5 py-10 lg:grid-cols-3 lg:pt-[60px] lg:pb-20 lg:pl-[100px]">
           <form className="grid max-w-[556px] gap-9 lg:col-span-2 lg:gap-10">
             <div className="flex w-full flex-wrap items-center gap-[35px]">
               {["Say Hi", "Get Quote"].map((option) => (
@@ -36,7 +36,7 @@ export default function Contact() {
                     id={option}
                     value={option}
                     onChange={() => setSelectedOption(option)}
-                    className="size-7 accent-lime-400"
+                    className="size-7"
                   />
                   {option.charAt(0).toUpperCase() + option.slice(1)}
                 </label>
@@ -73,11 +73,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <Button
-              type="submit"
-              variant="secondary"
-              className="hidden lg:inline-flex"
-            >
+            <Button variant="secondary" className="hidden lg:inline-flex">
               Send Message
             </Button>
           </form>
@@ -87,11 +83,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <Button
-          type="submit"
-          variant="secondary"
-          className="-mt-2.5 w-full lg:hidden"
-        >
+        <Button variant="secondary" className="-mt-2.5 w-full lg:hidden">
           Send Message
         </Button>
       </div>

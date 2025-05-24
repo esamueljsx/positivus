@@ -85,7 +85,7 @@ export default function Teams() {
                 </div>
                 <Link
                   href="https://www.linkedin.com/"
-                  className="bg-secondary absolute top-0 right-0 flex h-8 w-8 items-center justify-center rounded-full"
+                  className="bg-secondary absolute top-0 right-0 flex size-8 items-center justify-center rounded-full"
                 >
                   <LinkedinIcon className="fill-primary size-3.5" />
                 </Link>
