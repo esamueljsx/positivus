@@ -45,9 +45,14 @@ export default function Process() {
     <section className="content-wrapper py-14" id="process">
       <div className="block space-y-10 lg:space-y-20">
         <div className="flex flex-col items-center justify-center gap-7.5 lg:flex-row lg:justify-start lg:gap-10">
-          <Badge>
-            <h2>Our Working Process</h2>
-          </Badge>
+          <h2 className="hidden lg:block">
+            <Badge>Our Working process</Badge>
+          </h2>
+
+          <h2 className="flex flex-col items-center lg:hidden">
+            <Badge>Our Working</Badge>
+            <Badge>Process</Badge>
+          </h2>
 
           <p className="text-center lg:max-w-[290px] lg:text-left">
             Step-by-Step Guide to Achieving Your Business Goals

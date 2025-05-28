@@ -55,13 +55,13 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center lg:text-left text-center gap-6 lg:flex-row lg:justify-between">
+        <div className="flex flex-col items-center justify-center gap-6 text-center lg:flex-row lg:justify-between lg:text-left">
           <div className="block w-full space-y-[27px] lg:max-w-[332px]">
             <Badge size="sm">
               <h4 className="font-medium">Contact Us:</h4>
             </Badge>
 
-            <div className="block space-y-[15px] lg:space-y-5 text-white">
+            <div className="block space-y-[15px] text-white lg:space-y-5">
               <p>Email: info@positivus.com</p>
               <p>Phone: 555-567-8901</p>
               <p>
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-6 text-white lg:hidden justify-center">
+        <div className="flex items-center justify-center gap-6 text-white lg:hidden">
           <Link
             href="https://www.linkedin.com/"
             aria-label="Linkedin"
@@ -106,7 +106,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col items-center gap-[15px] lg:gap-10 border-t border-white/50 pt-9 lg:pt-[50px] lg:flex-row">
+        <div className="flex flex-col items-center gap-[15px] border-t border-white/50 pt-9 lg:flex-row lg:gap-10 lg:pt-[50px]">
           <p className="text-white/80">
             © {new Date().getFullYear()} Positivus. All Rights Reserved.
           </p>
